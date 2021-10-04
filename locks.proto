@@ -1,4 +1,4 @@
-syntax = "proto2";
+syntax = "proto3";
 
 package locks;
 
@@ -7,10 +7,10 @@ message Command {
         ADD = 0;
         DELETE = 1;
     }
-    required CommandType type = 1;
-    required string guid = 2;
-    required int32 start = 3;
-    optional int32 stop = 4;
+    CommandType type = 1;
+    string guid = 2;
+    int32 start = 3;
+    int32 stop = 4;
 }
 
 message Commands {
